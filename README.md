@@ -38,7 +38,19 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Client
 
-* MUI 5
+
+# v0.0.2
+* MUI5
+* MUI Icons
+* Next Routes
+* Redux 
+
+# v0.0.1
+* Starter
+
+
+
+* redux saga
 * Dokumentation 
 * Test with react-testing-library und jest 
 * e2e test cyress 
@@ -48,3 +60,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 * Electron
 * Electron autoUpdater
 * i18n
+* dockerize/podman
