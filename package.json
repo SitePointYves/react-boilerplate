@@ -2,6 +2,10 @@
   "name": "react-boilerplate",
   "version": "0.1.0",
   "private": true,
+  "main": "src/main/main.js",
+  "author": "Yves Kircher",
+  "description": "Electron + NextJS example project",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,7 +13,10 @@
     "lint": "next lint",
     "cy:open": "cypress open",
     "report:coverage": "nyc report --reporter=html",
-    "coverage:verify": "npx nyc report --check-coverage true --lines 80"
+    "coverage:verify": "npx nyc report --check-coverage true --lines 80",
+    "electron:start": "electron .",
+    "electron:dev": "concurrently -n \"NEXT,ELECTRON\" -c \"yellow,blue\" --kill-others \"next dev\" \"electron .\"",
+    "electron:build": "next build && electron-builder"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
@@ -20,6 +27,7 @@
     "@mui/material-nextjs": "^5.15.11",
     "@reduxjs/toolkit": "^2.2.5",
     "axios": "^1.6.8",
+    "electron-serve": "^2.0.0",
     "next": "14.2.3",
     "next-redux-saga": "^4.1.2",
     "next-redux-wrapper": "^8.1.0",
@@ -34,9 +42,12 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "concurrently": "^8.2.2",
     "cypress": "^13.9.0",
+    "electron": "^30.0.6",
+    "electron-builder": "^24.13.3",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "typescript": "^5"
-  }  
+  }
 }

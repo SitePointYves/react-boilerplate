@@ -1,0 +1,12 @@
+appId: "de.github.cosyveskircher.react-boilerplate-electron"
+productName: "My Test App"
+copyright: "Copyright (c) 2023 Yves Kircher"
+win:
+  target: ["dir", "portable", "zip"]
+  icon: "resources/icon.ico"
+linux:
+  target: ["dir", "appimage", "zip"]
+  icon: "resources/icon.png"
+mac:
+  target: ["dir", "dmg", "zip"]
+  icon: "resources/icon.icns"

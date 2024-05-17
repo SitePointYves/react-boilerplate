@@ -17,7 +17,7 @@ export default function Page() {
 
     useEffect(() => {
         dispatch(getMitarbeiterAction(id));
-    }, [id]);
+    }, [dispatch, id]);
 
     return  (
         <div>
@@ -28,7 +28,7 @@ export default function Page() {
             :
             data
               ?
-              (<div>Hi, I'm {data.name}</div>)
+              (<div>Hi, I am {data.name}</div>)
               :
               (<span>No user found!</span>)
           }
