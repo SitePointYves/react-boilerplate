@@ -44,20 +44,21 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 * MUI Icons
 * Next Routes
 * Redux 
+* redux saga
+* e2e test cyress 
 
 # v0.0.1
 * Starter
 
 
 
-* redux saga
+
 * Dokumentation 
 * Test with react-testing-library und jest 
-* e2e test cyress 
 * Rest anbindung 
 * validation example
 * Permissions example
 * Electron
 * Electron autoUpdater
 * i18n
-* dockerize/podman
+* dockerize/podman - cypress, electron
