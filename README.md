@@ -35,31 +35,34 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-
 ## Client
 
-
 # v0.0.2
-* MUI5
-* MUI Icons
-* Next Routes
-* Redux 
-* redux saga
-* e2e test cyress 
-* Electron
+
+- MUI5
+- MUI Icons
+- Next Routes
+- Redux
+- redux saga
+- e2e test cyress
+- Electron
 
 # v0.0.1
-* Starter
 
+- Starter
 
+- Dokumentation
+- Test with react-testing-library und jest
+- Rest anbindung
+- validation example
+- Permissions example
 
+- Electron autoUpdater
+- i18n
+- dockerize/podman - cypress, electron
 
-* Dokumentation 
-* Test with react-testing-library und jest 
-* Rest anbindung 
-* validation example
-* Permissions example
-
-* Electron autoUpdater
-* i18n
-* dockerize/podman - cypress, electron
+Run Sonarqube:
+docker-compose -f podman-compose-sonarqube.yml up
+http://localhost:9000/
+user:admin
+pwd:luckyhappy
