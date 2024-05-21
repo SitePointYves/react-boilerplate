@@ -18,11 +18,13 @@ export default async function RootLayout({
   const locale = await getLocale();
   const messages = await getMessages();
 
+  console.log("RootLayout", locale, messages);
+
   return (
     <StoreProvider>
       <html lang={locale}>
         <body>
-          <NextIntlClientProvider messages={messages}>
+          <NextIntlClientProvider locale={locale} messages={messages}>
             {children}
           </NextIntlClientProvider>
         </body>

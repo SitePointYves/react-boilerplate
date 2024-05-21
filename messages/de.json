@@ -1,5 +1,7 @@
 {
   "Index": {
-    "title": "Hallo welt!"
+    "title": "Hallo welt!",
+    "german": "Deutsch",
+    "english": "Englisch"
   }
 }
