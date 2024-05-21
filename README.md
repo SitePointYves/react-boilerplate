@@ -46,6 +46,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 * Redux 
 * redux saga
 * e2e test cyress 
+* Electron
 
 # v0.0.1
 * Starter
@@ -58,7 +59,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 * Rest anbindung 
 * validation example
 * Permissions example
-* Electron
+
 * Electron autoUpdater
 * i18n
 * dockerize/podman - cypress, electron
