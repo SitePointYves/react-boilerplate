@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from './counterSlice';
-import createSagaMiddleware from "@redux-saga/core";
-import mitarbeiterReducer from "./mitarbeiter/MitarbeiterSlice";
+import createSagaMiddleware from '@redux-saga/core';
 import rootSaga from './root.saga';
-
-
+import mitarbeiterReducer from './mitarbeiter/MitarbeiterSlice';
+import usersReducer from './users/UsersSlice';
+import userReducer from './user/UserSlice';
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -12,20 +12,17 @@ export const store = configureStore({
   reducer: {
     counter: counterReducer,
     mitarbeiter: mitarbeiterReducer,
+    users: usersReducer,
+    user: userReducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleware),
-  // middleware: (getDefaultMiddleware) => {
-  //   // WARNING: this means that _none_ of the default middleware are added!
-  //   return [sagaMiddleware]
-  //   // or for TS users, use:
-  //   // return new Tuple(myMiddleware)
-  // },
-})
+  middleware: getDefaultMiddleware => getDefaultMiddleware().concat(sagaMiddleware),
+  // devTools: process.env.NODE_ENV !== 'production',
+  devTools: true,
+});
 
-// Added line
 sagaMiddleware.run(rootSaga);
+//  other sagas
 
-// Infer the `RootState` and `AppDispatch` types from the store itself
-export type RootState = ReturnType<typeof store.getState>
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
-export type AppDispatch = typeof store.dispatch
+export type RootState = ReturnType<typeof store.getState>;
+
+export type AppDispatch = typeof store.dispatch;

@@ -37,13 +37,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Client
 
+# 0.0.3
+
+- i18n
+- Rest anbindung
+- Sonarqube
+
 # v0.0.2
 
-- MUI5
-- MUI Icons
 - Next Routes
-- Redux
-- redux saga
 - e2e test cyress
 - Electron
 
@@ -51,15 +53,23 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - Starter
 
-- Dokumentation
-- Test with react-testing-library und jest
-- Rest anbindung
+# TODO
+
+- debugger
+- Redux
+- redux saga
+- MUI5
+- MUI Icons
+- Test with react-testing-library und jest und cypress
+- dockerize/podman - cypress, electron
+
+# Later
+
 - validation example
 - Permissions example
-
 - Electron autoUpdater
-- i18n
-- dockerize/podman - cypress, electron
+
+# Sonarqube
 
 Run Sonarqube:
 docker-compose -f podman-compose-sonarqube.yml up
