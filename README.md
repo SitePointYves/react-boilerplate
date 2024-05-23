@@ -102,4 +102,4 @@ docker-compose -f podman-compose-ui.yml up
 
 # Upcoming cypress in container
 
-docker-compose -f podman-compose-cypress.yml up
+docker-compose -f podman-compose-ui.yml -f podman-compose-cypress.yml -f podman-compose-cypress-open.yml up --abort-on-container-exit
