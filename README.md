@@ -46,6 +46,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - i18n
 - Rest anbindung
 - Sonarqube
+- dockerize sonarqube
 
 # v0.0.2
 
@@ -59,12 +60,30 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 # TODO
 
-- Redux
-- redux saga
+- Redux and Saga
 - MUI5
 - MUI Icons
 - Test with react-testing-library und jest und cypress
 - dockerize/podman - cypress, electron
+
+# sinnvoll ?
+
+@fortawesome
+"across-tabs": "^1.3.1", => für rechner
+"formik": "^2.1.4", => forms
+"query-string": "^6.9.0",
+"rxjs": "^7.5.4",
+"uuid": "^7.0.2"
+"cross-env": "^7.0.3",
+"@babel"
+Lodash
+Axios
+React-hook-form
+renovate
+graphQl
+GRPC
+Webpack
+vitest
 
 # Later
 
