@@ -68,21 +68,18 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 # sinnvoll ?
 
-@fortawesome
-"across-tabs": "^1.3.1", => für rechner
-"formik": "^2.1.4", => forms
-"query-string": "^6.9.0",
-"rxjs": "^7.5.4",
-"uuid": "^7.0.2"
-"cross-env": "^7.0.3",
-"@babel"
-Lodash
-Axios
-React-hook-form
-renovate
+"formik" vs "React-hook-form"
+
+"query-string": => useSearchParams
+"rxjs": => However, if your application has complex state management needs, or if you're dealing with multiple asynchronous data streams that need to be coordinated, RxJS could be a useful addition. It's all about choosing the right tool for your specific needs.
+
+"cross-env": oder nextjs env?
+"@babel" => abwärts kompatibilität
+
+renovate bot
 graphQl
 GRPC
-Webpack
+Webpack => in nextjs included already
 vitest
 
 # Later
