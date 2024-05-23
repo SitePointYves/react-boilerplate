@@ -37,6 +37,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Client
 
+# 0.0.4
+
+- debugger
+
 # 0.0.3
 
 - i18n
@@ -55,7 +59,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 # TODO
 
-- debugger
 - Redux
 - redux saga
 - MUI5

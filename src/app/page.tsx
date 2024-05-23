@@ -9,7 +9,9 @@ import i18n from './18n';
 export default function Index() {
   const { t } = useTranslation();
 
-  const changeLanguage = (lang: string) => i18n.changeLanguage(lang);
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+  };
 
   return (
     <main className={styles.main}>
