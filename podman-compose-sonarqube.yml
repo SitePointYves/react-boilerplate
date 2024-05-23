@@ -1,9 +1,9 @@
-version: "3"
+version: '3'
 services:
   sonarqube:
     image: sonarqube:latest
     ports:
-      - "9000:9000"
+      - '9000:9000'
     networks:
       - sonarnet
     environment:
@@ -27,6 +27,26 @@ services:
       - postgresql:/var/lib/postgresql
       - postgresql_data:/var/lib/postgresql/data
 
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 4000:8080
+    networks:
+      - sonarnet
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container
+    restart: always
+    ports:
+      - '8888:80'
+    environment:
+      PGADMIN_DEFAULT_EMAIL: user-name@domain-name.com
+      PGADMIN_DEFAULT_PASSWORD: strong-password
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
 networks:
   sonarnet:
     driver: bridge
@@ -38,3 +58,4 @@ volumes:
   sonarqube_bundled-plugins:
   postgresql:
   postgresql_data:
+  pgadmin_data:

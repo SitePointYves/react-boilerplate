@@ -95,3 +95,11 @@ docker-compose -f podman-compose-sonarqube.yml up
 http://localhost:9000/
 user:admin
 pwd:luckyhappy
+
+# UI in Docker
+
+docker-compose -f podman-compose-ui.yml up
+
+# Upcoming cypress in container
+
+docker-compose -f podman-compose-cypress.yml up
