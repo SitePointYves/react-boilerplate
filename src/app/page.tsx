@@ -1,9 +1,9 @@
 'use client';
 
-import { useTranslation } from 'react-i18next';
-import styles from './page.module.css';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import i18n from './18n';
+import styles from './page.module.css';
 // import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 
 export default function Index() {
@@ -18,10 +18,6 @@ export default function Index() {
       <div className={styles.description}>
         <h1>{t('Index.title')}</h1>
         <Link href="/dashboard">Dashboard</Link>
-        <br></br>
-        <Link href="/test">Test</Link>
-        <br></br>
-        <Link href="/users">Users</Link>
         <br></br>
         <Link href="/mitarbeiter">Mitarbeiter</Link>
         {/* <AlternateEmailIcon /> */}
