@@ -1,32 +1,37 @@
 'use client';
 
+import { RootState } from '@/store/store';
+import Link from 'next/link';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMitarbeiterByIdRequestAction } from './store/MitarbeiterType';
-import { RootState } from '@/store/store';
+import { getMitarbeiterUebersichtRequestAction } from './store/MitarbeiterUebersichtTypes';
 
 export default function MitarbeiterUebersichtPage() {
-  const { mitarbeiter, error, isLoading } = useSelector(
-    (state: RootState) => state.MITARBEITER_SLICE_NAME,
-  );
-
-  const id = 1;
-
   const dispatch = useDispatch();
 
+  const { mitarbeiterUebersicht, error, isLoading } = useSelector(
+    (state: RootState) => state.MITARBEITER_UEBERSICHT_SLICE_NAME,
+  );
+
   useEffect(() => {
-    dispatch(getMitarbeiterByIdRequestAction(id));
-  }, [dispatch, id]);
+    dispatch(getMitarbeiterUebersichtRequestAction());
+  }, [dispatch]);
+
+  if (isLoading) {
+    return <span>Loading...</span>;
+  }
+
+  if (error) {
+    return <span>Error: {error}</span>;
+  }
 
   return (
-    <div>
-      {isLoading || error === '' ? (
-        <span>Loading...</span>
-      ) : mitarbeiter ? (
-        <div>Hi, I am {mitarbeiter.name}</div>
-      ) : (
-        <span>No user found!</span>
-      )}
-    </div>
+    <ul>
+      {mitarbeiterUebersicht.map(mitarbeiter => (
+        <li key={mitarbeiter.id}>
+          <Link href={`/mitarbeiter/${mitarbeiter.id}`}>{mitarbeiter.name}</Link>
+        </li>
+      ))}
+    </ul>
   );
 }

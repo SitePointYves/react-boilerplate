@@ -5,17 +5,17 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { RootState } from '@/store/store';
 import { usePathname } from 'next/navigation';
-import { getMitarbeiterByIdRequestAction } from '../store/MitarbeiterType';
+import { getMitarbeiterByIdRequestAction } from './store/MitarbeiterTypes';
 
 export default function MitarbeiterPage() {
+  const dispatch = useDispatch();
   const pathName = usePathname();
-  const id = Number(pathName?.toString().split('/').pop());
 
   const { mitarbeiter, error, isLoading } = useSelector(
     (state: RootState) => state.MITARBEITER_SLICE_NAME,
   );
 
-  const dispatch = useDispatch();
+  const id = Number(pathName?.toString().split('/').pop());
 
   useEffect(() => {
     if (!isNaN(id)) {

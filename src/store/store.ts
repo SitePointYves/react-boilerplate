@@ -1,17 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
 import createSagaMiddleware from '@redux-saga/core';
 import rootSaga from './root.saga';
-import mitarbeiterReducer from '../app/mitarbeiter/store/MitarbeiterSlice';
-import usersReducer from './users/UsersSlice';
-import userReducer from './user/UserSlice';
+import mitarbeiterReducer from '../app/mitarbeiter/[id]/store/MitarbeiterSlice';
+import mitarbeiterUebersichtReducer from '../app/mitarbeiter/store/MitarbeiterUebersichtSlice';
 
 const sagaMiddleware = createSagaMiddleware();
 
 export const store = configureStore({
   reducer: {
     MITARBEITER_SLICE_NAME: mitarbeiterReducer,
-    users: usersReducer,
-    user: userReducer,
+    MITARBEITER_UEBERSICHT_SLICE_NAME: mitarbeiterUebersichtReducer,
   },
   middleware: getDefaultMiddleware => getDefaultMiddleware().concat(sagaMiddleware),
   // devTools: process.env.NODE_ENV !== 'production',

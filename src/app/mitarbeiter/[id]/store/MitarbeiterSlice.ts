@@ -6,7 +6,7 @@ import {
   getMitarbeiterByIdFailureAction,
   getMitarbeiterByIdRequestAction,
   getMitarbeiterByIdSuccessAction,
-} from './MitarbeiterType';
+} from './MitarbeiterTypes';
 
 const ladeMitarbeiterInitialState: LadeMitarbeiterStateType = {
   mitarbeiter: null,
@@ -20,6 +20,7 @@ export const mitarbeiterSlice = createSlice({
   reducers: {},
   extraReducers: builder => {
     builder
+      // lade Mitarberiter by id actions
       .addCase(getMitarbeiterByIdRequestAction, (state, action: PayloadAction<number>) => {
         state.isLoading = true;
         state.error = null;

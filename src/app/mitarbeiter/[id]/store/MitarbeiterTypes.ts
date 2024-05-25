@@ -1,4 +1,4 @@
-import { Action, PayloadAction, PayloadActionCreator, createAction } from '@reduxjs/toolkit';
+import { PayloadActionCreator, createAction } from '@reduxjs/toolkit';
 
 export type MitarbeiterStateType = {
   id: string;
@@ -20,7 +20,7 @@ export type GlobalMitarbeiterStateType = {
   ladeMitarbeiter: LadeMitarbeiterStateType;
 };
 
-// SLICE
+// SLICES
 export const MITARBEITER_SLICE_NAME = 'mitarbeiter';
 export type MITARBEITER_SLICE = typeof MITARBEITER_SLICE_NAME;
 
@@ -31,16 +31,16 @@ export const getMitarbeiterByIdRequestAction: PayloadActionCreator<
   typeof GET_MITARBEITER_BY_ID_REQUEST
 > = createAction(GET_MITARBEITER_BY_ID_REQUEST);
 
-export const GET_MITARBEITER_BY_ID_FAILURE = `${MITARBEITER_SLICE_NAME}/getMitarbeiterByIdFailure`;
-export const getMitarbeiterByIdFailureAction: PayloadActionCreator<
-  string,
-  typeof GET_MITARBEITER_BY_ID_FAILURE
-> = createAction(GET_MITARBEITER_BY_ID_FAILURE);
-
 export const GET_MITARBEITER_BY_ID_SUCCESS = `${MITARBEITER_SLICE_NAME}/getMitarbeiterByIdSuccess`;
 export const getMitarbeiterByIdSuccessAction: PayloadActionCreator<
   MitarbeiterStateType,
   typeof GET_MITARBEITER_BY_ID_SUCCESS
 > = createAction(GET_MITARBEITER_BY_ID_SUCCESS);
+
+export const GET_MITARBEITER_BY_ID_FAILURE = `${MITARBEITER_SLICE_NAME}/getMitarbeiterByIdFailure`;
+export const getMitarbeiterByIdFailureAction: PayloadActionCreator<
+  string,
+  typeof GET_MITARBEITER_BY_ID_FAILURE
+> = createAction(GET_MITARBEITER_BY_ID_FAILURE);
 
 // TODO: update, insert, delete

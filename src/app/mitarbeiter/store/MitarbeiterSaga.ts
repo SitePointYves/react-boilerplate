@@ -1,28 +1,28 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-
 import {
-  MitarbeiterStateType,
-  getMitarbeiterByIdFailureAction,
-  getMitarbeiterByIdRequestAction,
-  getMitarbeiterByIdSuccessAction,
-} from './MitarbeiterType';
+  getMitarbeiterUebersichtFailureAction,
+  getMitarbeiterUebersichtRequestAction,
+  getMitarbeiterUebersichtSuccessAction,
+} from './MitarbeiterUebersichtTypes';
+import { MitarbeiterStateType } from '../[id]/store/MitarbeiterTypes';
 import mitarbeiterApiInstance from '../api/mitarbeiterApi';
 
-function* getMitarbeiterByIdSaga(
-  action: ReturnType<typeof getMitarbeiterByIdRequestAction>,
+function* getMitarbeiterUebersichtSaga(
+  action: ReturnType<typeof getMitarbeiterUebersichtRequestAction>,
 ): Generator<any, any, any> {
   try {
-    const mitarbeiter: MitarbeiterStateType = yield call(
-      mitarbeiterApiInstance.getMitarbeiter,
-      action.payload,
+    const mitarbeiterUebersicht: MitarbeiterStateType[] = yield call(
+      mitarbeiterApiInstance.getMitarbeiterUebersicht,
     );
-    yield put(getMitarbeiterByIdSuccessAction(mitarbeiter));
+    yield put(getMitarbeiterUebersichtSuccessAction(mitarbeiterUebersicht));
   } catch (error) {
     console.error(error);
-    yield put(getMitarbeiterByIdFailureAction('Fehler beim Laden der Benutzer'));
+    yield put(
+      getMitarbeiterUebersichtFailureAction('Fehler beim Laden der Mitarbeiter Uebersicht'),
+    );
   }
 }
 
-export function* watchGetMitarbeiter() {
-  yield takeLatest(getMitarbeiterByIdRequestAction.type, getMitarbeiterByIdSaga);
+export function* watchGetMitarbeiterUebersicht() {
+  yield takeLatest(getMitarbeiterUebersichtRequestAction.type, getMitarbeiterUebersichtSaga);
 }
