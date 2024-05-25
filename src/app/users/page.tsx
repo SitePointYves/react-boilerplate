@@ -1,7 +1,6 @@
 'use client';
 
 import { RootState } from '@/store/store';
-import { getUsersRequest } from '@/store/users/UsersSlice';
 
 import { UsersStateType } from '@/store/users/UsersTypes';
 import { useEffect } from 'react';
@@ -12,7 +11,7 @@ const UsersPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getUsersRequest());
+    // dispatch(getUsersRequestAction());
   }, [dispatch]);
 
   // console.log(users, loading, error);

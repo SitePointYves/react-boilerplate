@@ -1,5 +1,5 @@
 import { all, fork } from 'redux-saga/effects';
-import { watchGetMitarbeiter } from './mitarbeiter/MitarbeiterSaga';
+import { watchGetMitarbeiter } from '../app/mitarbeiter/store/MitarbeiterSaga';
 import watchGetUser from './user/UserSaga';
 import watchGetUsers from './users/UsersSaga';
 

@@ -1,8 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from './counterSlice';
 import createSagaMiddleware from '@redux-saga/core';
 import rootSaga from './root.saga';
-import mitarbeiterReducer from './mitarbeiter/MitarbeiterSlice';
+import mitarbeiterReducer from '../app/mitarbeiter/store/MitarbeiterSlice';
 import usersReducer from './users/UsersSlice';
 import userReducer from './user/UserSlice';
 
@@ -10,8 +9,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
-    mitarbeiter: mitarbeiterReducer,
+    MITARBEITER_SLICE_NAME: mitarbeiterReducer,
     users: usersReducer,
     user: userReducer,
   },

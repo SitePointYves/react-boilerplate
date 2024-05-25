@@ -22,6 +22,8 @@ export default function Index() {
         <Link href="/test">Test</Link>
         <br></br>
         <Link href="/users">Users</Link>
+        <br></br>
+        <Link href="/mitarbeiter">Mitarbeiter</Link>
         {/* <AlternateEmailIcon /> */}
         <br></br>
         <button onClick={() => changeLanguage('de')}>{t('Index.german')}</button>

@@ -1,0 +1,7 @@
+### Get all users
+GET https://jsonplaceholder.typicode.com/users
+Accept: application/json
+
+### Get user
+GET https://jsonplaceholder.typicode.com/users/1
+Accept: application/json

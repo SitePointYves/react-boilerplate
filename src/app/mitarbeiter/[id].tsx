@@ -4,13 +4,14 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMitarbeiterByIdRequestAction } from './store/MitarbeiterType';
 import { RootState } from '@/store/store';
+import { useRouter } from 'next/router';
 
-export default function MitarbeiterUebersichtPage() {
+export default function MitarbeiterPage() {
+  const router = useRouter();
+  const id = Number(router.query.id);
   const { mitarbeiter, error, isLoading } = useSelector(
     (state: RootState) => state.MITARBEITER_SLICE_NAME,
   );
-
-  const id = 1;
 
   const dispatch = useDispatch();
 

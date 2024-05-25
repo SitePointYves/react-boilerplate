@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { StoreProvider } from '@/store/StoreProvider';
-import { ThemeProvider } from '@emotion/react';
-import theme from './theme';
 
 export const metadata: Metadata = {
   title: 'Mitarbeiterverzeichnis',
