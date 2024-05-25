@@ -1,5 +1,0 @@
-services:
-  cypress:
-    entrypoint: cypress open --project .
-    environment:
-      - DISPLAY

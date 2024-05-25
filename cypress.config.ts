@@ -1,11 +1,13 @@
-import { defineConfig } from "cypress";
+import { defineConfig } from 'cypress';
+import task from '@cypress/code-coverage/task';
 
 export default defineConfig({
   e2e: {
     experimentalStudio: true,
+    video: true,
     setupNodeEvents(on, config) {
-      require('@cypress/code-coverage/task')(on, config)
-      return config
+      task(on, config);
+      return config;
     },
-  }
+  },
 });
