@@ -13,7 +13,7 @@ export type MitarbeiterStateType = {
 export type LadeMitarbeiterStateType = {
   mitarbeiter: MitarbeiterStateType | null;
   isLoading: boolean;
-  error: string;
+  error: string | null;
 };
 
 export type GlobalMitarbeiterStateType = {

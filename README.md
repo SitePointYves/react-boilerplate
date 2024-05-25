@@ -60,6 +60,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 # TODO
 
+- Dynamic route /mitarbeiter/1
 - Redux and Saga
 - MUI5
 - MUI Icons

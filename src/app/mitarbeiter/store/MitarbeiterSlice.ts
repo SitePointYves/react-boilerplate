@@ -11,7 +11,7 @@ import {
 const ladeMitarbeiterInitialState: LadeMitarbeiterStateType = {
   mitarbeiter: null,
   isLoading: false,
-  error: '',
+  error: null,
 };
 
 export const mitarbeiterSlice = createSlice({
@@ -22,14 +22,14 @@ export const mitarbeiterSlice = createSlice({
     builder
       .addCase(getMitarbeiterByIdRequestAction, (state, action: PayloadAction<number>) => {
         state.isLoading = true;
-        state.error = '';
+        state.error = null;
       })
       .addCase(
         getMitarbeiterByIdSuccessAction,
         (state, action: PayloadAction<MitarbeiterStateType>) => {
           state.isLoading = false;
           state.mitarbeiter = action.payload;
-          state.error = '';
+          state.error = null;
         },
       )
       .addCase(getMitarbeiterByIdFailureAction, (state, action: PayloadAction<string>) => {
