@@ -40,6 +40,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 # 0.0.4
 
 - debugger
+- Dynamic route /mitarbeiter/1
+- Redux and Saga
 
 # 0.0.3
 
@@ -60,8 +62,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 # TODO
 
-- Dynamic route /mitarbeiter/1
-- Redux and Saga
 - MUI5
 - MUI Icons
 - Test with react-testing-library und jest und cypress
