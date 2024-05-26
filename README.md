@@ -57,6 +57,8 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 # TODO
 
+- create udn update auslagern ? /edit/1 => create route
+- mui templates
 - Test with react-testing-library und jest und cypress
 - dockerize/podman - cypress, electron
 - "prop-types"
