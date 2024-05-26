@@ -25,6 +25,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 - MUI5 vs PrimeREact
 - MUI Icons
+- env
 
 # 0.0.4
 
@@ -61,13 +62,9 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 "rxjs": => However, if your application has complex state management needs, or if you're dealing with multiple asynchronous data streams that need to be coordinated, RxJS could be a useful addition. It's all about choosing the right tool for your specific needs.
 
-"cross-env": oder nextjs env?
-"@babel" => abwärts kompatibilität
-
-renovate bot
+renovate bot => nur über actions
 graphQl
 GRPC
-Webpack => in nextjs included already
 vitest
 
 # Later
@@ -75,6 +72,11 @@ vitest
 - validation example
 - Permissions example
 - Electron autoUpdater
+
+# Already inside
+
+Webpack
+babel
 
 # Sonarqube
 

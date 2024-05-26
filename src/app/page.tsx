@@ -8,9 +8,9 @@ import styles from './page.module.css';
 
 export default function Index() {
   const { t } = useTranslation();
-  const apiKey = process.env.NEXT_PUBLIC_API_KEY;
-  const apiUrl = process.env.NEXT_PUBLIC_BACKEND_REST_MITARBEITER;
-  console.log(apiKey, apiUrl);
+  // Get environment variables
+  // const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+  // const apiUrl = process.env.NEXT_PUBLIC_BACKEND_REST_MITARBEITER;
 
   return (
     <main className={styles.main}>
