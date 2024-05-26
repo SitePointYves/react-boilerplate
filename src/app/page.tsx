@@ -8,11 +8,15 @@ import styles from './page.module.css';
 
 export default function Index() {
   const { t } = useTranslation();
+  const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+  const apiUrl = process.env.NEXT_PUBLIC_BACKEND_REST_MITARBEITER;
+  console.log(apiKey, apiUrl);
 
   return (
     <main className={styles.main}>
       <div className={styles.description}>
         <h1>{t('Index.title')}</h1>
+
         <Link href="/dashboard">Dashboard</Link>
         <br></br>
         <Link href="/mitarbeiter">Mitarbeiter</Link>
