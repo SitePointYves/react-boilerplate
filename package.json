@@ -33,6 +33,7 @@
     "axios": "^1.7.2",
     "electron-serve": "^2.0.0",
     "fontsource-roboto": "^4.0.0",
+    "http-status-codes": "^2.3.0",
     "i18next": "^23.11.5",
     "next": "14.2.3",
     "next-redux-saga": "^4.1.2",

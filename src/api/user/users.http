@@ -5,3 +5,28 @@ Accept: application/json
 ### Get user
 GET https://jsonplaceholder.typicode.com/users/1
 Accept: application/json
+
+### Create user
+POST https://jsonplaceholder.typicode.com/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "New User",
+  "email": "newuser@example.com"
+}
+
+### Update user
+PUT https://jsonplaceholder.typicode.com/users/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 1,
+  "name": "Updated User",
+  "email": "updateduser@example.com"
+}
+
+### Delete user
+DELETE https://jsonplaceholder.typicode.com/users/1
+Accept: application/json

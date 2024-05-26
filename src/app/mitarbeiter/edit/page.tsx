@@ -2,29 +2,36 @@
 
 import { getFormErrorMessage } from '@/utils/formValidationUtils';
 import { Button, TextField } from '@mui/material';
+import { useRouter } from 'next/router';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
-import { MitarbeiterStateType } from '../[id]/store/MitarbeiterTypes';
+import {
+  MitarbeiterStateType,
+  upsertMitarbeiterRequestAction,
+} from '../[id]/store/MitarbeiterTypes';
 import { MitarbeiterForm, transformMitarbeiterFormToState } from './utils/MitarbeiterForm';
 
 export default function MitarbeiterEditPage() {
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
+    reset,
   } = useForm<MitarbeiterForm>({
     defaultValues: { name: '', email: '' },
   });
 
   const onSubmit: SubmitHandler<MitarbeiterForm> = mitarbeiter => {
     const mitarbeiterSubmit: MitarbeiterStateType = transformMitarbeiterFormToState(mitarbeiter);
-    console.log(mitarbeiter, mitarbeiterSubmit);
+    dispatch(upsertMitarbeiterRequestAction(mitarbeiterSubmit));
+    reset();
+    router.push('/mitarbeiter');
   };
   console.log('watch rerender', watch());
-  console.log('errors', errors);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -54,24 +61,6 @@ export default function MitarbeiterEditPage() {
       <Button type="submit" variant="contained" color="primary" fullWidth>
         Submit
       </Button>
-      {/* <input
-        defaultValue=""
-        {...register('name', { required: true, maxLength: 50 })}
-        placeholder="Bitte Namen eingeben..."
-      />
-      {errors.name && <span>This field is required. {errors.name.message}</span>}
-      <input
-        {...register('email', {
-          required: true,
-          pattern: {
-            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-            message: 'invalid email address',
-          },
-        })}
-        placeholder="Bitte Email eingeben..."
-      />
-      {errors.email && <span>This field is required. {errors.email.message}</span>}
-      <input type="submit" /> */}
 
       {/* <input type="number" {...register('age', { min: 18, max: 99 })} /> */}
     </form>
