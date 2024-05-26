@@ -1,7 +1,7 @@
 import { PayloadActionCreator, createAction } from '@reduxjs/toolkit';
 
 export type MitarbeiterStateType = {
-  id: string;
+  id?: string;
   name: string;
   // lastname: string;
   email: string;

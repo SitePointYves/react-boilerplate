@@ -21,6 +21,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Client
 
+# 0.0.6
+
+- React-hook-form + validation
+- utils
+
 # 0.0.5
 
 - MUI5 vs PrimeREact
@@ -58,8 +63,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 # sinnvoll ?
 
-"formik" vs "React-hook-form"
-
 "rxjs": => However, if your application has complex state management needs, or if you're dealing with multiple asynchronous data streams that need to be coordinated, RxJS could be a useful addition. It's all about choosing the right tool for your specific needs.
 
 renovate bot => nur über actions
@@ -69,8 +72,7 @@ vitest
 
 # Later
 
-- validation example
-- Permissions example
+- Permissions example / login
 - Electron autoUpdater
 
 # Already inside
