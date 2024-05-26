@@ -91,3 +91,27 @@ pwd:luckyhappy
 # UI in Docker
 
 docker-compose -f podman-compose-ui.yml up
+
+# REACT
+
+## useEffect
+
+useEffect: Dieser Hook wird verwendet, um Nebeneffekte in Funktionskomponenten auszuführen. Nebeneffekte könnten das Abrufen von Daten, Abonnements oder manuelle Änderungen am DOM sein. Sie verwenden useEffect, wenn Sie nach dem Rendern der Komponente etwas Code ausführen möchten. Dieser Code kann nach jedem Rendern ausgeführt werden oder nur, wenn sich bestimmte Werte geändert haben.
+
+useEffect(() => {
+// Daten abrufen oder einen anderen Nebeneffekt hier ausführen
+}, [abhaengigkeit1, abhaengigkeit2]); // Ausführen nach jedem Rendern, bei dem sich abhaengigkeit1 oder abhaengigkeit2 geändert hat
+
+## useCallback
+
+useCallback: Dieser Hook wird verwendet, um Funktionen zu memoisieren. Wenn Sie eine Funktion haben, die als Prop an Kindkomponenten weitergegeben wird und diese Funktion sich nicht ändert, es sei denn, bestimmte Werte ändern sich, können Sie useCallback verwenden, um unnötige Neu-Renderings der Kindkomponenten zu vermeiden.
+
+const memoisierteCallback = useCallback(() => {
+macheEtwas(a, b);
+}, [a, b]); // Die Funktion nur neu erstellen, wenn sich a oder b ändert
+
+## useMemo
+
+useMemo: Dieser Hook wird verwendet, um aufwändige Berechnungen zu memoisieren. Wenn Sie eine rechenintensive Funktion haben, die einen Wert zurückgibt und dieser Wert sich nur ändert, wenn sich bestimmte Werte ändern, können Sie useMemo verwenden, um unnötige Berechnungen zu vermeiden.
+
+const memoisierterWert = useMemo(() => berechneAufwaendigenWert(a, b), [a, b]); // Nur neu berechnen, wenn sich a oder b ändert
