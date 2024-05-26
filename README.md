@@ -62,16 +62,16 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 # TODO
 
-- MUI5
+- MUI5 vs PrimeREact
 - MUI Icons
 - Test with react-testing-library und jest und cypress
 - dockerize/podman - cypress, electron
+- "prop-types"
 
 # sinnvoll ?
 
 "formik" vs "React-hook-form"
 
-"query-string": => useSearchParams
 "rxjs": => However, if your application has complex state management needs, or if you're dealing with multiple asynchronous data streams that need to be coordinated, RxJS could be a useful addition. It's all about choosing the right tool for your specific needs.
 
 "cross-env": oder nextjs env?

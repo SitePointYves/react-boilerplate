@@ -1,17 +1,13 @@
 'use client';
 
+import ToggleLanguage from '@/components/ToggleLanguage';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-import i18n from './18n';
 import styles from './page.module.css';
 // import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 
 export default function Index() {
   const { t } = useTranslation();
-
-  const changeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
 
   return (
     <main className={styles.main}>
@@ -22,8 +18,7 @@ export default function Index() {
         <Link href="/mitarbeiter">Mitarbeiter</Link>
         {/* <AlternateEmailIcon /> */}
         <br></br>
-        <button onClick={() => changeLanguage('de')}>{t('Index.german')}</button>
-        <button onClick={() => changeLanguage('en')}>{t('Index.english')}</button>
+        <ToggleLanguage />
       </div>
     </main>
   );

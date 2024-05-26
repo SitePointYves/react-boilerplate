@@ -7,7 +7,16 @@ const bundleAnalyzer = withBundleAnalyzer({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    swcPlugins: [['swc-plugin-coverage-instrument', {}]],
+    swcPlugins: [
+      [
+        'use-client',
+        {
+          include: ['@mui/material', '@mui/icons-material', '@mui/x-data-grid'],
+        },
+        'swc-plugin-coverage-instrument',
+        {},
+      ],
+    ],
   },
   // output: "export",
   images: {

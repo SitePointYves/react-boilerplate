@@ -1,6 +1,9 @@
+import { StoreProvider } from '@/store/StoreProvider';
+import { ThemeProvider } from '@mui/material';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import type { Metadata } from 'next';
 import './globals.css';
-import { StoreProvider } from '@/store/StoreProvider';
+import theme from './theme';
 
 export const metadata: Metadata = {
   title: 'Mitarbeiterverzeichnis',
@@ -14,12 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <StoreProvider>
-      <html lang="de">
-        <body>
-          {/* <ThemeProvider theme={theme}>{children}</ThemeProvider> */}
-          {children}
-        </body>
-      </html>
+      <AppRouterCacheProvider>
+        <ThemeProvider theme={theme}>
+          <html lang="de">
+            <body>{children}</body>
+          </html>
+        </ThemeProvider>
+      </AppRouterCacheProvider>
     </StoreProvider>
   );
 }
