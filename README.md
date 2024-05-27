@@ -25,6 +25,8 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 - React-hook-form + validation
 - utils
+- cypress test
+- basic ts mocha test ( missing react tests)
 
 # 0.0.5
 
@@ -70,7 +72,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 renovate bot => nur über actions
 graphQl
 GRPC
-vitest
 
 # Later
 
