@@ -23,6 +23,20 @@
         "uriFormat": "%s",
         "action": "debugWithChrome"
       }
-    }
+    },
+       {
+  "name": "Debug Jest Tests",
+  "type": "node",
+  "request": "launch",
+  "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/jest",
+  "args": ["--runInBand"],
+  "cwd": "${workspaceFolder}",
+  "console": "integratedTerminal",
+  "internalConsoleOptions": "neverOpen",
+  "disableOptimisticBPs": true,
+  "windows": {
+    "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/jest.cmd"
+  }
+}
   ]
 }

@@ -32,7 +32,7 @@ export default function MitarbeiterPage() {
   }
 
   return (
-    <div className="placeholder">
+    <div className="placeholder" data-testid="mitarbeiter_begruessungstext">
       {mitarbeiter ? <div>Hi, I am {mitarbeiter.name}</div> : <span>No data</span>}
     </div>
   );
